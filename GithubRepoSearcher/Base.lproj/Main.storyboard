@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SearchVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SearchVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="SearchVC" customModule="GithubRepoSearcher" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="FZ1-v4-6pr">
+                                <rect key="frame" x="0.0" y="150" width="375" height="517"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" red="0.78808718919999998" green="0.78791451450000005" blue="0.80853986739999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="5nf-HQ-GKX"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3Qd-eS-3Yd"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ZB-tV-0KY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="githubLogo" translatesAutoresizingMaskIntoConstraints="NO" id="01C-jZ-gaQ">
+                                        <rect key="frame" x="87.5" y="10" width="200" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="fYp-Mu-5v8"/>
+                                            <constraint firstAttribute="height" constant="60" id="r4G-eD-o0V"/>
+                                        </constraints>
+                                    </imageView>
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="2wR-4L-2bd">
+                                        <rect key="frame" x="10" y="87" width="355" height="56"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="f8o-ll-2Nq"/>
+                                        </constraints>
+                                        <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                    </searchBar>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6TT-JT-88D">
+                                        <rect key="frame" x="0.0" y="148" width="375" height="1"/>
+                                        <color key="backgroundColor" red="0.78808718919999998" green="0.78791451450000005" blue="0.80853986739999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="fua-YA-Wj8"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="6TT-JT-88D" secondAttribute="bottom" constant="1" id="JSm-HU-Lqa"/>
+                                    <constraint firstAttribute="trailing" secondItem="6TT-JT-88D" secondAttribute="trailing" id="LaY-CH-PCA"/>
+                                    <constraint firstItem="01C-jZ-gaQ" firstAttribute="centerX" secondItem="4ZB-tV-0KY" secondAttribute="centerX" id="SXg-9y-OMn"/>
+                                    <constraint firstItem="2wR-4L-2bd" firstAttribute="leading" secondItem="4ZB-tV-0KY" secondAttribute="leading" constant="10" id="WRo-OY-t2b"/>
+                                    <constraint firstItem="6TT-JT-88D" firstAttribute="leading" secondItem="4ZB-tV-0KY" secondAttribute="leading" id="XLx-6w-WBe"/>
+                                    <constraint firstAttribute="trailing" secondItem="2wR-4L-2bd" secondAttribute="trailing" constant="10" id="f9y-gY-o0z"/>
+                                    <constraint firstAttribute="height" constant="150" id="fa2-7X-5Lh"/>
+                                    <constraint firstItem="01C-jZ-gaQ" firstAttribute="top" secondItem="4ZB-tV-0KY" secondAttribute="top" constant="10" id="mOo-Si-9Pv"/>
+                                    <constraint firstAttribute="bottom" secondItem="2wR-4L-2bd" secondAttribute="bottom" constant="7" id="uLh-sZ-sIf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FZ1-v4-6pr" secondAttribute="bottom" id="5Ak-CG-67R"/>
+                            <constraint firstItem="FZ1-v4-6pr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5uY-dU-DZS"/>
+                            <constraint firstItem="FZ1-v4-6pr" firstAttribute="top" secondItem="4ZB-tV-0KY" secondAttribute="bottom" id="9Ny-S4-CC1"/>
+                            <constraint firstItem="4ZB-tV-0KY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hJP-UB-of2"/>
+                            <constraint firstItem="4ZB-tV-0KY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hJT-l0-WLE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4ZB-tV-0KY" secondAttribute="trailing" id="oK4-yp-gRT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FZ1-v4-6pr" secondAttribute="trailing" id="vDU-fR-cHe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mainTable" destination="FZ1-v4-6pr" id="tfy-SN-uEw"/>
+                        <outlet property="searchBar" destination="2wR-4L-2bd" id="MYh-Cw-0yn"/>
+                        <outlet property="topView" destination="4ZB-tV-0KY" id="blb-sU-CMn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-207.19999999999999" y="165.06746626686657"/>
+        </scene>
+        <!--Web ViewVC-->
+        <scene sceneID="Uwx-nK-Rqx">
+            <objects>
+                <viewController storyboardIdentifier="WebViewVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gCr-k7-t0U" customClass="WebViewVC" customModule="GithubRepoSearcher" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TUs-LV-R4i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" allowsBackForwardNavigationGestures="YES" allowsLinkPreview="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ek8-3u-L2D">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration" allowsAirPlayForMediaPlayback="NO" allowsPictureInPictureMediaPlayback="NO" suppressesIncrementalRendering="YES">
+                                    <dataDetectorTypes key="dataDetectorTypes" none="YES"/>
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ek8-3u-L2D" firstAttribute="leading" secondItem="08B-80-Q8e" secondAttribute="leading" id="2uV-40-clS"/>
+                            <constraint firstItem="08B-80-Q8e" firstAttribute="bottom" secondItem="ek8-3u-L2D" secondAttribute="bottom" id="57W-n3-9U6"/>
+                            <constraint firstItem="08B-80-Q8e" firstAttribute="trailing" secondItem="ek8-3u-L2D" secondAttribute="trailing" id="eLD-id-bbP"/>
+                            <constraint firstItem="08B-80-Q8e" firstAttribute="top" secondItem="ek8-3u-L2D" secondAttribute="top" id="zHv-eX-vl4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="08B-80-Q8e"/>
+                    </view>
+                    <connections>
+                        <outlet property="webViewPage" destination="ek8-3u-L2D" id="G5K-ol-hKf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lcM-h6-q5n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="559" y="166"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="githubLogo" width="375" height="156"/>
+    </resources>
+</document>
